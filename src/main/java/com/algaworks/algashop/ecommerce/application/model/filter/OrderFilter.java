@@ -31,7 +31,7 @@ public class OrderFilter {
 
 	@Builder.Default
 	@JsonIgnore
-	private SortType sort = SortType.PLACE_AT;
+	private SortType sort = SortType.PLACED_AT;
 
 	@Builder.Default
 	@JsonIgnore
@@ -56,7 +56,7 @@ public class OrderFilter {
 	@Getter
 	@AllArgsConstructor
 	enum SortType {
-		PLACE_AT("placedAt");
+		PLACED_AT("placedAt");
 
 		private final String propertyName;
 	}
