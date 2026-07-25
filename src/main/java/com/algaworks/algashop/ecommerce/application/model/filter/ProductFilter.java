@@ -43,7 +43,7 @@ public class ProductFilter {
 	private Sort sort;
 
 	public enum Property {
-		ADDED_AT,
+		CREATED_AT,
 		SALE_PRICE
 	}
 

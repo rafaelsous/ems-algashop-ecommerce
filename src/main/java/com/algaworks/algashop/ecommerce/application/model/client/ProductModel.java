@@ -8,7 +8,7 @@ import java.time.OffsetDateTime;
 @Data
 public class ProductModel {
 	private String id;
-	private OffsetDateTime addedAt;
+	private OffsetDateTime createdAt;
 	private String name;
 	private String brand;
 	private String slug;
