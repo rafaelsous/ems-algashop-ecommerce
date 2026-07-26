@@ -18,8 +18,7 @@ import static org.springframework.security.config.Customizer.withDefaults;
 public class EcommerceWebSecurityConfig {
 
 	@Bean
-	@SuppressWarnings("java:S112")
-	public SecurityFilterChain filterChain(HttpSecurity http, ClientRegistrationRepository clientRegistrationRepository) throws Exception {
+	public SecurityFilterChain filterChain(HttpSecurity http, ClientRegistrationRepository clientRegistrationRepository) {
 		http
 			.authorizeHttpRequests(authorize -> authorize
 				.requestMatchers("/checkout/**", "/buy-now/**").authenticated()
@@ -37,7 +36,7 @@ public class EcommerceWebSecurityConfig {
 						.logoutSuccessHandler(oidcLogoutSuccessHandler(clientRegistrationRepository))
 						.invalidateHttpSession(true)
 						.clearAuthentication(true)
-						.deleteCookies("JSESSIONID")
+						.deleteCookies("SESSION")
 				);
 		return http.build();
 	}
