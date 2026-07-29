@@ -18,7 +18,8 @@ import static org.springframework.security.config.Customizer.withDefaults;
 public class EcommerceWebSecurityConfig {
 
 	@Bean
-	public SecurityFilterChain filterChain(HttpSecurity http, ClientRegistrationRepository clientRegistrationRepository) {
+	@SuppressWarnings("java:S1130")
+	public SecurityFilterChain filterChain(HttpSecurity http, ClientRegistrationRepository clientRegistrationRepository) throws Exception {
 		http
 			.authorizeHttpRequests(authorize -> authorize
 				.requestMatchers("/checkout/**", "/buy-now/**").authenticated()
