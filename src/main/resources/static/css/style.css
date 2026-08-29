@@ -2331,6 +2331,27 @@ textarea.input {
     align-items: center;
 }
 
+/* Cart items have no image, so the space reserved for it is not needed */
+.cart-dropdown .cart-list .product-widget .product-body {
+    padding-left: 0;
+    min-height: 0;
+}
+
+.shopping-cart-item-unavailable > th,
+.shopping-cart-item-unavailable > td {
+    color: #8D99AE;
+}
+
+.shopping-cart-item-unavailable .shopping-cart-item-name {
+    color: #8D99AE;
+    text-decoration: line-through;
+}
+
+.shopping-cart-item-unavailable-label {
+    margin-left: 8px;
+    vertical-align: middle;
+}
+
 .shopping-cart-detail-order-summary {
     display:flex;
 }
